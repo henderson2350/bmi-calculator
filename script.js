@@ -4,10 +4,7 @@ var form = document.getElementById("form");
 var weightLabel = document.getElementById("weight-label");
 var heightLabel = document.getElementById("height-label");
 var result = document.getElementById("result");
-
-
 var calculateButton = document.getElementById("calculateBtn")
-
 var selectionDisplay = document.getElementById("selectionChosen");
 var selectionChosen = "";
 
@@ -38,15 +35,12 @@ function calculateBMI() {
     let total = 0.0;
     switch(selectionChosen) {
         case "M":
-            console.log(heightInput*heightInput);
             total = ((weightInput / heightInput/ heightInput) * 10000);
             result.textContent = total;
-            console.log(total);
             break;
 
         case "U":
             total = ((weightInput / heightInput /heightInput) * 703);
-            console.log(total);
             result.textContent = total;
             break;
     }
